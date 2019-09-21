@@ -20,14 +20,14 @@ int main()
 		int k = 0; int l = 0;
 		for (int i = 0; i < BUFFER; i++)
 		{
-			if (CData[i] == '\0')//Ìø¿ªÊ¼µÄ¿ÕÖµ¡£
+			if (CData[i] == '\0')//è·³å¼€å§‹çš„ç©ºå€¼ã€‚
 				break;
 			for (int j = 0; j < TEMPNUM; j++)
 			{
 				temp[j] = CData[i++];
 				if (CData[i] == '-'||CData[i]=='\0')
-				{//µÃ¼Ó¼ì²âºóÃæµÄ¿ÕÖµ¡£
-					Length[l++] = j+1;//jÎªtempµÄË÷Òı£¬temp³¤¶ÈÓ¦µ±¼Ó1
+				{//å¾—åŠ æ£€æµ‹åé¢çš„ç©ºå€¼ã€‚
+					Length[l++] = j+1;//jä¸ºtempçš„ç´¢å¼•ï¼Œtempé•¿åº¦åº”å½“åŠ 1
 					break;
 				}
 			}
@@ -74,10 +74,10 @@ int* BigNumSubtract(int a[], int b[], int aLength)
 			int j = i;
 			do
 			{
-				j--;//µÍÎ»Îª¸ß
-			} while (a[j]==0);//ÕÒµ½·ÇÁã¸ßÎ»
-			a[j] -= 1;	//½èÎ»
-			for (j=j+1; j<i; j++)//iÓëj¼äµÄÁã¸ßÎ»²¹9
+				j--;//ä½ä½ä¸ºé«˜
+			} while (a[j]==0);//æ‰¾åˆ°éé›¶é«˜ä½
+			a[j] -= 1;	//å€Ÿä½
+			for (j=j+1; j<i; j++)//iä¸jé—´çš„é›¶é«˜ä½è¡¥9
 			{
 				a[j] = 9;
 			}
