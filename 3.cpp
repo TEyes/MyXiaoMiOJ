@@ -23,7 +23,7 @@ int main()
 			if (CData[i] == '\0')//跳开始的空值。
 				break;
 			for (int j = 0; j < TEMPNUM; j++)
-			{
+			{//temp作为一个分割输入的缓冲，每次都应当清除上一次内容。
 				temp[j] = CData[i++];
 				if (CData[i] == '-'||CData[i]=='\0')
 				{//得加检测后面的空值。
@@ -31,7 +31,7 @@ int main()
 					break;
 				}
 			}
-			for (int i = 0; i < Length[k]; i++)
+			for (int i = 0; i < Length[k]; i++)//这里的Legnth限制了temp的长度，所以b的值没有错。
 			{
 				num[k][i] = (temp[i] + 2) % 10;
 			}
